@@ -23,8 +23,6 @@
 #include "LoRaWan_APP.h"
 //#include "LoRaMacCommands.h"
 #include "Wire.h"
-//#include "GXHTC.h"
- #include "img.h"
 #include "HT_DEPG0290BxS800FxX_BW.h"
 #include "sensor_solenoid.h"
 #include "esp_sleep.h"
