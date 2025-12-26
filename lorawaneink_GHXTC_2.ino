@@ -24,7 +24,7 @@
 //#include "LoRaMacCommands.h"
 #include "Wire.h"
 //#include "GXHTC.h"
-#include "img.h"
+ #include "img.h"
 #include "HT_DEPG0290BxS800FxX_BW.h"
 #include "sensor_solenoid.h"
 #include "esp_sleep.h"
@@ -84,17 +84,17 @@ char buffer[64];
 ValveState_t vlv_packet_pend;  // used to keep the command and the state independent until resolved
 
 
-//#define REED_NODE       true      //  count reed closures of one switch for water flow meter
+#define REED_NODE       true      //  count reed closures of one switch for water flow meter
 //#define VALVE_NODE      true      //  two valve controlller and possible line pressure
-#define SOIL_SENSOR_NODE true  //  two soil temp moist and possible pH
+//#define SOIL_SENSOR_NODE true  //  two soil temp moist and possible pH
 //#define SOIL_AIR_SENSOR_NODE true   //  two soil temp moist, one air temp moist
 //#define LAKE_NODE  true           //  one 16 bit number reflecting lake depth, calibration constants in device table
 
 
 /* OTAA para*/
-uint8_t devEui[] = { 0x70, 0xB3, 0xD5, 0x7E, 0xD0, 0x06, 0x53, 0xf4 };
+uint8_t devEui[] = { 0x70, 0xB3, 0xD5, 0x7E, 0xD0, 0x06, 0x53, 0xf2 };
 uint8_t appEui[] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
-uint8_t appKey[] = { 0x74, 0xD6, 0x6E, 0x63, 0x45, 0x82, 0x48, 0x27, 0xFE, 0xC5, 0xB7, 0x70, 0xBA, 0x2B, 0x50, 0x4b };
+uint8_t appKey[] = { 0x74, 0xD6, 0x6E, 0x63, 0x45, 0x82, 0x48, 0x27, 0xFE, 0xC5, 0xB7, 0x70, 0xBA, 0x2B, 0x50, 0x49 };
 
 /* ABP para --  not used for this project*/
 uint8_t nwkSKey[] = { 0x15, 0xb1, 0xd0, 0xef, 0xa4, 0x63, 0xdf, 0xbe, 0x3d, 0x11, 0x18, 0x1e, 0x1e, 0xc7, 0xda, 0x85 };
